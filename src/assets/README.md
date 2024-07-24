@@ -4,30 +4,6 @@
 
 - resource [Generate Favicons](https://favicon.io/)
 
-#### Install Packages (Optional)
-
-```sh
-npm install @tanstack/react-query@4.29.5 @tanstack/react-query-devtools@4.29.6 axios@1.3.6 dayjs@1.11.7 react-icons@4.8.0 react-router-dom@6.10.0 react-toastify@9.1.2 recharts@2.5.0 styled-components@5.3.10
-
-```
-
-#### Router
-
-[React Router](https://reactrouter.com/en/main)
-
-- version 6.4 brought significant changes (loader and action)
-- pages as independent entities
-- less need for global state
-- more pages
-
-#### Setup Router
-
-- all my examples will include version !!!
-
-```sh
-npm i react-router-dom@6.10.0
-```
-
 App.jsx
 
 ```jsx
