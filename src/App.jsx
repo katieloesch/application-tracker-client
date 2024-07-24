@@ -1,7 +1,7 @@
 import React from "react";
 
 const App = () => {
-  return <h1>Application Tracker</h1>;
+  return <h2>Application Tracker</h2>;
 };
 
 export default App;
