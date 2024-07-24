@@ -1,19 +1,43 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+import {
+  // AddJob,
+  // Admin,
+  // AllJobs,
+  DashboardLayout,
+  // DeleteJob,
+  // EditJob,
+  // Error,
+  HomeLayout,
+  // Landing,
+  Login,
+  // Profile,
+  Register,
+  // Stats,
+} from './pages';
+
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <h2>HOME</h2>,
+    element: <HomeLayout />,
   },
   {
-    path: '/about',
-    element: <h2>ABOUT</h2>,
+    path: '/register',
+    element: <Register />,
+  },
+  {
+    path: '/login',
+    element: <Login />,
+  },
+  {
+    path: '/dashboard',
+    element: <DashboardLayout />,
   },
 ]);
 
 const App = () => {
-  return <RouterProvider router={router}></RouterProvider>;
+  return <RouterProvider router={router} />;
 };
 
 export default App;
