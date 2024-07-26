@@ -4,64 +4,7 @@
 
 - resource [Generate Favicons](https://favicon.io/)
 
-#### Error Page
-
-- bubbles up
-
-App.jsx
-
-```jsx
-{
-    path: '/',
-    element: <HomeLayout />,
-    errorElement: <Error />,
-    ...
-}
-```
-
-Error.jsx
-
-```jsx
-import { Link, useRouteError } from 'react-router-dom';
-
-const Error = () => {
-  const error = useRouteError();
-  console.log(error);
-  return (
-    <div>
-      <h1>Error Page !!!</h1>
-      <Link to='/dashboard'>back home</Link>
-    </div>
-  );
-};
-export default Error;
-```
-
-#### Styled Components
-
-- CSS in JS
-- Styled Components
-- have logic and styles in component
-- no name collisions
-- apply javascript logic
-- [Styled Components Docs](https://styled-components.com/)
-- [Styled Components Course](https://www.udemy.com/course/styled-components-tutorial-and-project-course/?referralCode=9DABB172FCB2625B663F)
-
-```sh
-npm install styled-components@5.3.10
-```
-
-```js
-import styled from 'styled-components';
-
-const El = styled.el`
-  // styles go here
-`;
-```
-
-- no name collisions, since unique class
-- vscode-styled-components extension
-- colors and bugs
+````
 
 Landing.jsx
 
@@ -82,7 +25,7 @@ const StyledButton = styled.button`
   color: white;
 `;
 export default Landing;
-```
+````
 
 #### Style Entire React Component
 
