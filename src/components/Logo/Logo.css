@@ -29,9 +29,44 @@
   }
 }
 
+.logo.auth {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 1.38rem;
+  justify-content: center;
+
+  .logo-txt {
+    font-size: clamp(1.15rem, 1.5vw, 1.3rem);
+  }
+
+  .logo-icon {
+    width: 45px;
+    height: 45px;
+  }
+}
+
 @media (max-width: 420px) {
   .logo-icon {
     width: 45px;
     height: 45px;
+  }
+}
+
+@media (max-width: 315px) {
+  .logo.auth {
+    .logo-txt {
+      font-size: clamp(1rem, 1.2vw, 1.1rem);
+      text-align: center;
+      width: min-content;
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+
+      svg {
+        padding: 6px;
+      }
+    }
   }
 }

@@ -72,6 +72,12 @@
       - https://github.com/john-smilga/mern-jobify-v2
       - https://github.com/john-smilga
 
+---
+
+<!---
+
+*** Notes ***
+
 ### day 1:23/07/2024
 
 - set up frontend using vite
@@ -93,6 +99,11 @@ day 2: 24/07/2024
 
 day 2: 25/07/2024
 
+27/07/2024
+
+- set up content for 404 page
+- moved logo into its own react component so I can reuse it in other places
+
 ---
 
 challenges:
@@ -100,7 +111,9 @@ challenges:
 wins:
 This was not my first React project, so for this app I wanted to challenge myself and expand my understanding of the framework. I set up previous application using the 'create-react-app' command so for this project I wanted to learn how to use vite. Although the file structure and jsx extension are slighly different it didn't take me too long to get the hang of it.
 
-Similarly, I have used react router before, but I normally do so using the the `<BrowserRouter>`, `<Route>` and `<Routes>` components. For this project I wanted to learn a new way of setting up routes and opted for the `createBrowserRouter()` function and the `<RouterProvider>` components
+Similarly, I have used react router before, but I normally do so using the the `<BrowserRouter>`, `<Route>` and `<Routes>` components. For this project I wanted to learn a new way of setting up routes and opted for the `createBrowserRouter()` function and the `<RouterProvider>` components. Those took a bit longer to get working but I manged to get all the routes set up.
+
+This was also the first time I used styled-components and I feel very comfortable using them now.
 
 ```JSX
 
@@ -227,4 +240,80 @@ function App() {
 - Use **`<Route>` and `<Routes>`** for straightforward and traditional JSX-based route definitions within your components.
 - Use **`createBrowserRouter` and `RouterProvider`** for a more powerful, declarative, and centralized routing configuration that supports advanced features like nested routes, data loading, and error handling.
 
+Vite and Create React App (CRA) are both tools used to set up and manage React projects, but they have several differences in terms of performance, features, and use cases. Here's a detailed comparison between the two:
+
+### 1. **Performance**
+
+- **Vite**:
+  - **Faster Development Builds**: Vite leverages native ES module imports in the browser, enabling it to start the development server almost instantly regardless of the size of the application.
+  - **Hot Module Replacement (HMR)**: Vite provides faster HMR, making updates almost instantaneous by only replacing the changed modules without a full page reload.
+- **Create React App**:
+  - **Slower Development Builds**: CRA uses Webpack, which can be slower, especially for larger projects. Initial startup and subsequent rebuilds can take longer.
+  - **Hot Module Replacement (HMR)**: CRA supports HMR, but it can be slower compared to Vite due to the underlying Webpack build process.
+
+### 2. **Bundling**
+
+- **Vite**:
+
+  - Uses Rollup for production builds, which is known for its efficient tree-shaking and smaller bundle sizes.
+  - Supports code splitting out of the box.
+
+- **Create React App**:
+  - Uses Webpack for both development and production builds. Webpack is highly configurable but can result in larger build times and potentially larger bundle sizes.
+  - Also supports code splitting through dynamic `import()` calls, but configuration might be less straightforward compared to Vite.
+
+### 3. **Configuration and Extensibility**
+
+- **Vite**:
+  - Designed to be minimal out of the box but highly extensible through plugins.
+  - Simpler configuration through a single `vite.config.js` file.
+- **Create React App**:
+  - Convention over configuration: CRA is designed to work with zero configuration out of the box.
+  - Extending CRA requires ejecting, which exposes the underlying Webpack configuration but makes future updates harder.
+
+### 4. **Community and Ecosystem**
+
+- **Vite**:
+
+  - Developed and maintained by the creator of Vue.js, Evan You, and has a growing community.
+  - Gaining popularity rapidly due to its performance advantages and modern approach.
+
+- **Create React App**:
+  - Created by Facebook and has a large, established community.
+  - A lot of resources, tutorials, and third-party tools are available due to its long-standing presence in the React ecosystem.
+
+### 5. **Features**
+
+- **Vite**:
+
+  - Support for multiple frameworks: While CRA is specific to React, Vite can be used with Vue, Svelte, and other frameworks.
+  - Modern JavaScript and TypeScript support out of the box.
+
+- **Create React App**:
+  - Focused on React projects with robust support for JSX and React-specific features.
+  - Supports modern JavaScript and TypeScript with minimal configuration.
+
+### 6. **Build Output and Optimization**
+
+- **Vite**:
+
+  - Produces highly optimized builds with smaller bundle sizes thanks to Rollup.
+  - Efficient tree-shaking and dead code elimination.
+
+- **Create React App**:
+  - Produces optimized builds with Webpack, but they can be larger compared to Vite's output.
+  - Good support for code splitting and lazy loading.
+
+### Conclusion
+
+**Vite** is a modern build tool that offers faster development builds, better HMR, and smaller production builds, making it an excellent choice for new projects or developers looking for a highly performant setup. **Create React App** is a well-established, easy-to-use tool that provides a solid foundation for React projects with minimal configuration, making it suitable for beginners and projects where community support and stability are paramount.
+
+Choosing between the two depends on your specific needs:
+
+- Use **Vite** if you prioritize fast development times, modern build optimizations, and flexibility with configuration.
+- Use **Create React App** if you prefer convention over configuration, need extensive community support, or are starting with React and want a stable, familiar tool.
+
 lessons learned:
+
+
+-->

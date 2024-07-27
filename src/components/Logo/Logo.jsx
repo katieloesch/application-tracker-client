@@ -1,9 +1,9 @@
 import React from 'react';
 import './Logo.css';
 
-const Logo = () => {
+const Logo = ({ section }) => {
   return (
-    <div className='logo'>
+    <div className={`logo ${section}`}>
       <div className='logo-icon'>
         {/* svg source: visualpharm - https://visualpharm.com/assets/940/Find%20Matching%20Job-595b40b85ba036ed117dc10b.svg */}
         <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'>

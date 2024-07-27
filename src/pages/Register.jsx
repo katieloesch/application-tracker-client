@@ -1,12 +1,47 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Wrapper from '../styledComponents/RegisterLoginPage';
+import { FormInput, Logo } from '../components';
+
 const Register = () => {
   return (
-    <div>
-      <h2>Register Page</h2>
-      <Link to='/login'>Login Page</Link>
-    </div>
+    <Wrapper>
+      <form className='form auth-form'>
+        <Logo section='auth'></Logo>
+        <h4>Register</h4>
+
+        <FormInput
+          type='text'
+          name='name'
+          defaultValue='harley'
+          labelText='First Name'
+        />
+        <FormInput
+          type='text'
+          name='lastName'
+          defaultValue='quinn'
+          labelText='Last Name'
+        />
+        <FormInput type='text' name='location' defaultValue='gotham' />
+        <FormInput
+          type='email'
+          name='email'
+          defaultValue='hquinn@wayneindusties.com'
+        />
+        <FormInput type='password' name='password' defaultValue='mrj' />
+
+        <button type='submit' className='btn btn-block'>
+          submit
+        </button>
+        <p>
+          Already a member?
+          <Link to='/login' className='member-btn'>
+            Login
+          </Link>
+        </p>
+      </form>
+    </Wrapper>
   );
 };
 
