@@ -8,7 +8,7 @@ const Register = () => {
   return (
     <Wrapper>
       <form className='form auth-form'>
-        <Logo section='auth'></Logo>
+        <Logo section='auth' />
         <h4>Register</h4>
 
         <FormInput

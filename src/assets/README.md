@@ -1,8 +1,8 @@
-- details on specific styles
 - Coding Addict - [Default Starter Video](https://youtu.be/UDdyGNlQK5w)
 - Repo - [Default Starter Repo](https://github.com/john-smilga/default-starter)
-
 - resource [Generate Favicons](https://favicon.io/)
+
+<!---
 
 ````
 
@@ -6318,3 +6318,7 @@ router.post('/register', apiLimiter, validateRegisterInput, register);
 router.post('/login', apiLimiter, validateLoginInput, login);
 ```
 ````
+
+
+
+-->

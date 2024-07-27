@@ -4,6 +4,20 @@
 
   - https://www.npmjs.com/
 
+- to start application:
+
+  - install dependencies:
+
+  ```zsh
+  npm i
+  ```
+
+  - then start the server:
+
+  ```zsh
+  npm run dev
+  ```
+
 - dependencies
 
   - sass (v1.77.8)
