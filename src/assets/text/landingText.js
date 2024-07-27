@@ -1,7 +1,7 @@
-const landingText = {
+const txt = {
   description: [
     'Application Description goes here...Application Description goes here...Application Description goes here...Application Description goes here...Application Description goes here...Application Description goes here...Application Description goes here...Application Description goes here...',
   ],
 };
 
-export default landingText;
+export default txt;

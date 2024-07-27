@@ -1,6 +1,7 @@
 // import forms1 from './forms_1.jpg';
 // import forms2 from './forms_2.jpg';
 import landingMain from './landing_main.jpg';
+import notFound from './not_found.jpg';
 
 const images = {
   landingMain: {
@@ -11,6 +12,16 @@ const images = {
       '"People fill out a resume form" by Tetiana Marchenko , available on iStock: https://www.istockphoto.com/vector/people-fill-out-a-resume-form-online-application-job-search-colorful-vector-gm1163533146-319520797',
     url: 'https://www.istockphoto.com/vector/people-fill-out-a-resume-form-online-application-job-search-colorful-vector-gm1163533146-319520797',
     author: 'Tetiana Marchenko',
+    format: 'jpg',
+  },
+  notFound: {
+    id: 1,
+    src: notFound,
+    alt: 'People confused by 404 screen, image by Rudzhan Nagiev, available on iStock: https://www.istockphoto.com/vector/404-problem-at-website-vector-linear-gm2149127142-570354721',
+    title:
+      '"404 problem at website linear" by Rudzhan Nagiev , available on iStock: https://www.istockphoto.com/vector/404-problem-at-website-vector-linear-gm2149127142-570354721',
+    url: 'https://www.istockphoto.com/vector/404-problem-at-website-vector-linear-gm2149127142-570354721',
+    author: 'Rudzhan Nagiev',
     format: 'jpg',
   },
   // forms1: {

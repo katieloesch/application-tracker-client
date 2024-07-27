@@ -6,6 +6,8 @@ const Wrapper = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgb(255, 255, 255);
+
   img {
     width: 90vw;
     max-width: 600px;

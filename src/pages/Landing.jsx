@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Wrapper from '../styledComponents/LandingPage.js';
-import landingText from '../assets/text/landingText.js';
+import txt from '../assets/text/landingText.js';
 import { images } from '../assets/images';
 import { Logo } from '../components';
 
@@ -20,7 +20,7 @@ const Landing = () => {
           </h1>
 
           <div className='description'>
-            {landingText.description.map((paragraph, index) => (
+            {txt.description.map((paragraph, index) => (
               <p key={`landing-description-${index}`}>{paragraph}</p>
             ))}
           </div>
