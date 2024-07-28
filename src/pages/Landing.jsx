@@ -10,7 +10,7 @@ const Landing = () => {
   return (
     <Wrapper>
       <nav>
-        <Logo />
+        <Logo section='landing' />
       </nav>
 
       <div className='container page'>
