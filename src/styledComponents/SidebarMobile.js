@@ -64,6 +64,37 @@ const Wrapper = styled.aside`
     display: grid;
     place-items: center;
   }
+
+  .add-job-icon {
+    svg {
+      scale: 1.13;
+    }
+  }
+
+  .all-jobs-icon {
+    svg {
+      scale: 1.08;
+    }
+  }
+
+  .stats-icon {
+    svg {
+      scale: 0.95;
+    }
+  }
+
+  .profile-icon {
+    svg {
+      scale: 0.92;
+    }
+  }
+
+  .admin-icon {
+    svg {
+      scale: 1.2;
+    }
+  }
+
   .active {
     color: var(--primary-500);
   }

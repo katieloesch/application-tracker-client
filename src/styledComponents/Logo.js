@@ -113,5 +113,9 @@ const Wrapper = styled.section`
       }
     }
   }
+
+  .logo.sidebar-mobile {
+    width: 100%;
+  }
 `;
 export default Wrapper;
