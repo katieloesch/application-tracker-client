@@ -2,9 +2,9 @@ import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import {
-  // AddJob,
-  // Admin,
-  // AllJobs,
+  AddJob,
+  Admin,
+  AllJobs,
   DashboardLayout,
   // DeleteJob,
   // EditJob,
@@ -12,9 +12,9 @@ import {
   HomeLayout,
   Landing,
   Login,
-  // Profile,
+  Profile,
   Register,
-  // Stats,
+  Stats,
 } from './pages';
 
 const router = createBrowserRouter([
@@ -38,6 +38,28 @@ const router = createBrowserRouter([
       {
         path: 'dashboard',
         element: <DashboardLayout />,
+        children: [
+          {
+            index: true,
+            element: <AddJob />,
+          },
+          {
+            path: 'stats',
+            element: <Stats />,
+          },
+          {
+            path: 'all-jobs',
+            element: <AllJobs />,
+          },
+          {
+            path: 'profile',
+            element: <Profile />,
+          },
+          {
+            path: 'admin',
+            element: <Admin />,
+          },
+        ],
       },
     ],
   },
