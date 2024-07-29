@@ -25,6 +25,12 @@ const Wrapper = styled.aside`
       display: flex;
       align-items: center;
       padding-left: 2.5rem;
+
+      /* @media (min-width: 1775px) {
+        padding-left: 5px;
+        justify-content: flex-end;
+        background-color: pink;
+      } */
     }
     .nav-links {
       padding-top: 2rem;

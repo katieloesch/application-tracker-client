@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { useDashboardContext } from '../pages/DashboardLayout';
 import { navLinks } from '../utils';
 
-const NavLinks = () => {
+const NavLinks = ({ mobile }) => {
   const { user, toggleSidebar } = useDashboardContext();
 
   return (
@@ -14,7 +14,7 @@ const NavLinks = () => {
           to={link.path}
           key={`nav-link-mobile-${link.label}`}
           className={`nav-link ${link.className}`}
-          onClick={toggleSidebar}
+          onClick={mobile && toggleSidebar}
           end
         >
           <span className='icon'>{link.icon}</span>

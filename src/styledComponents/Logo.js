@@ -99,6 +99,63 @@ const Wrapper = styled.section`
     }
   }
 
+  .logo.sidebar {
+    @media (min-width: 993px) {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      .logo-txt {
+        font-size: clamp(1.15rem, 1.4vw, 1.8rem);
+        padding: 18px;
+      }
+
+      .logo-icon {
+        width: 35px;
+        height: 35px;
+
+        svg {
+          padding: 6px;
+        }
+      }
+    }
+    @media (min-width: 1120px) {
+      .logo-txt {
+        padding: 15px;
+      }
+      .logo-icon {
+        width: 45px;
+        height: 45px;
+
+        svg {
+          padding: 8px;
+        }
+      }
+    }
+
+    @media (min-width: 1500px) {
+      .logo-txt {
+        font-size: clamp(1.15rem, 1.2vw, 1.3rem);
+        padding: 10px;
+      }
+
+      .logo-icon {
+        width: 50px;
+        height: 50px;
+
+        svg {
+          padding: 9px;
+        }
+      }
+    }
+    @media (min-width: 1775px) {
+      .logo-txt {
+        font-size: 1.3rem;
+        /* display: none; */
+      }
+    }
+  }
+
   .logo.sidebar-mobile {
     width: 100%;
   }

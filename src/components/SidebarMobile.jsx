@@ -18,7 +18,7 @@ const SidebarMobile = () => {
           <header>
             <Logo section='sidebar-mobile' />
           </header>
-          <NavLinks />
+          <NavLinks mobile={true} />
         </div>
       </div>
     </Wrapper>
