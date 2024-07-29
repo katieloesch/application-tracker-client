@@ -3,9 +3,7 @@ import { FaTimes } from 'react-icons/fa';
 
 import Wrapper from '../styledComponents/SidebarMobile';
 import { useDashboardContext } from '../pages/DashboardLayout';
-import { Logo } from '../components';
-import { navLinks } from '../utils';
-import { NavLink } from 'react-router-dom';
+import { Logo, NavLinks } from '../components';
 
 const SidebarMobile = () => {
   const { showSidebar, toggleSidebar } = useDashboardContext();
@@ -20,20 +18,7 @@ const SidebarMobile = () => {
           <header>
             <Logo section='sidebar-mobile' />
           </header>
-          <div className='nav-links'>
-            {navLinks.map((link) => (
-              <NavLink
-                to={link.path}
-                key={`nav-link-mobile-${link.label}`}
-                className={`nav-link ${link.className}`}
-                onClick={toggleSidebar}
-                end
-              >
-                <span className='icon'>{link.icon}</span>
-                {link.label}
-              </NavLink>
-            ))}
-          </div>
+          <NavLinks mobile={true} />
         </div>
       </div>
     </Wrapper>

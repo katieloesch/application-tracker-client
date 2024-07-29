@@ -1,14 +1,21 @@
 import React from 'react';
+
 import Wrapper from '../styledComponents/Sidebar';
+import { NavLinks, Logo } from '../components';
 import { useDashboardContext } from '../pages/DashboardLayout';
 
 const Sidebar = () => {
-  //testing to see if custom hook is working
-  const data = useDashboardContext();
-  console.log(data);
+  const { showSidebar, toggleSidebar } = useDashboardContext();
+
   return (
     <Wrapper>
-      <h1>Sidebar</h1>
+      <div className={`sidebar-container ${!showSidebar && 'show-sidebar'}`}>
+        <div className='content'></div>
+        <header>
+          <Logo section='sidebar' />
+        </header>
+        <NavLinks mobile={false} />
+      </div>
     </Wrapper>
   );
 };
