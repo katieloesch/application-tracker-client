@@ -60,6 +60,13 @@
     - repo: https://github.com/styled-components/styled-components
     - homepage: https://styled-components.com/
 
+- UI
+  - icons
+    - react-icons (v4.8.0)
+      - npm: https://www.npmjs.com/package/react-icons
+      - repo: https://github.com/react-icons/react-icons
+      - homepage: https://react-icons.github.io/react-icons/
+
 ### resources & tutorials
 
 - docs:
