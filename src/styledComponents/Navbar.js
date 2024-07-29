@@ -25,7 +25,7 @@ const Wrapper = styled.nav`
     align-items: center;
 
     svg {
-      scale: 1.25;
+      scale: 1.35;
     }
   }
 

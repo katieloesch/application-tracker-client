@@ -79,25 +79,9 @@ const Wrapper = styled.section`
       width: 100%;
 
       .logo-txt {
-        font-size: clamp(1rem, 2vw, 2rem);
+        font-size: clamp(1.15rem, 2vw, 2rem);
       }
 
-      .logo-icon {
-        width: 45px;
-        height: 45px;
-      }
-    }
-    @media (max-width: 876px) {
-      .logo-icon {
-        width: 40px;
-        height: 40px;
-
-        svg {
-          padding: 7px;
-        }
-      }
-    }
-    @media (max-width: 525px) {
       .logo-icon {
         width: 35px;
         height: 35px;
@@ -107,7 +91,8 @@ const Wrapper = styled.section`
         }
       }
     }
-    @media (max-width: 420px) {
+
+    @media (max-width: 490px) {
       .logo-txt {
         display: none;
       }
