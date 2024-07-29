@@ -5,7 +5,6 @@ import { NavLinks, Logo } from '../components';
 import { useDashboardContext } from '../pages/DashboardLayout';
 
 const Sidebar = () => {
-  //testing to see if custom hook is working
   const { showSidebar, toggleSidebar } = useDashboardContext();
 
   return (

@@ -119,6 +119,7 @@ const Wrapper = styled.section`
         }
       }
     }
+
     @media (min-width: 1120px) {
       .logo-txt {
         padding: 15px;
@@ -148,6 +149,7 @@ const Wrapper = styled.section`
         }
       }
     }
+
     @media (min-width: 1775px) {
       .logo-txt {
         font-size: 1.3rem;
