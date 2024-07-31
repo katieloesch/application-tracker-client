@@ -17,6 +17,16 @@ import {
   Stats,
 } from './pages';
 
+export const getThemeFromLS = () => {
+  // check localStorage to see if theme was saved there last time website was visited
+  // if a theme was saved there, apply it
+  const darkThemeActiveLS = localStorage.getItem('darkThemeActive') === 'true';
+  document.body.classList.toggle('dark-theme', darkThemeActiveLS);
+  return darkThemeActiveLS;
+};
+
+getThemeFromLS();
+
 const router = createBrowserRouter([
   {
     path: '/',
