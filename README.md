@@ -396,4 +396,80 @@ Choosing between the two depends on your specific needs:
 lessons learned:
 
 
+
+
+day: 31/07/2024
+-> logout button
+-> dark theme
+-> save dark theme to localStorage
+
+
+App.jsx
+
+```JSX
+
+export const getThemeFromLS = () => {
+  const darkThemeActiveLS = localStorage.getItem('darkThemeActive') === 'true';
+  document.body.classList.toggle('dark-theme', darkThemeActiveLS);
+  return darkThemeActiveLS;
+};
+
+getThemeFromLS();
+
+```
+
+DashboardLayout.jsx
+
+```JSX
+  import { getThemeFromLS } from '../App';
+
+  const [darkThemeActive, setDarkThemeActive] = useState(getThemeFromLS());
+
+  const toggleDarkTheme = () => {
+    const updatedTheme = !darkThemeActive;
+    setDarkThemeActive(updatedTheme);
+    document.body.classList.toggle('dark-theme', updatedTheme);
+    localStorage.setItem('darkThemeActive', updatedTheme);
+  };
+```
+
+index.css
+```CSS
+  .dark-theme {
+    --text-color: var(--dark-mode-text-color);
+    --background-color: var(--dark-mode-bg-color);
+    --text-secondary-color: var(--dark-mode-text-secondary-color);
+    --background-secondary-color: var(--dark-mode-bg-secondary-color);
+  }
+```
+
+wins:
+I wanted to implement a dark/light theme as well as had never been able to implement this in previous applications I build due to time constraints, so it was important to me to set some time aside during this project to achieve this.
+I also thought it would be nice if the theme stayed the same after reloading the page, so I decided to save the theme to active storage once the toggle button is clicked and then automatically apply it again once the page reloads.
+
+```JSX
+
+import React from 'react';
+import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs';
+import Wrapper from '../styledComponents/ThemeToggle';
+import { useDashboardContext } from '../pages/DashboardLayout';
+
+const ThemeToggle = () => {
+  const { darkThemeActive, toggleDarkTheme } = useDashboardContext();
+
+  return (
+    <Wrapper onClick={toggleDarkTheme}>
+      {darkThemeActive ? (
+        <BsFillSunFill className='toggle-icon' />
+      ) : (
+        <BsFillMoonFill className='toggle-icon' />
+      )}
+    </Wrapper>
+  );
+};
+
+export default ThemeToggle;
+
+```
+
 -->

@@ -1,8 +1,9 @@
 import React, { createContext, useContext, useState } from 'react';
 import { Outlet } from 'react-router-dom';
+
 import Wrapper from '../styledComponents/Dashboard';
 import { Navbar, Sidebar, SidebarMobile } from '../components';
-
+import { getThemeFromLS } from '../App';
 const DashboardContext = createContext();
 
 const DashboardLayout = () => {
@@ -11,10 +12,15 @@ const DashboardLayout = () => {
   };
 
   const [showSidebar, setShowSidebar] = useState(false);
-  const [darkThemeActive, setDarkThemeActive] = useState(false);
+  const [darkThemeActive, setDarkThemeActive] = useState(getThemeFromLS());
 
   const toggleDarkTheme = () => {
-    console.log('toggling dark theme ... ');
+    const updatedTheme = !darkThemeActive;
+    setDarkThemeActive(updatedTheme);
+    document.body.classList.toggle('dark-theme', updatedTheme);
+
+    //save theme to localStorage so it persists after page reload
+    localStorage.setItem('darkThemeActive', updatedTheme);
   };
 
   const toggleSidebar = () => {
