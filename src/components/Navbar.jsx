@@ -1,8 +1,7 @@
 import React from 'react';
 import { BiMenuAltLeft } from 'react-icons/bi';
 
-import { Logo } from '../components';
-
+import { Logo, LogoutContainer, ThemeToggle } from '../components';
 import Wrapper from '../styledComponents/Navbar';
 import { useDashboardContext } from '../pages/DashboardLayout';
 
@@ -21,7 +20,10 @@ const Navbar = () => {
           <h4 className='logo-text'>Dashboard</h4>
         </div>
 
-        <div className='btn-container'>toggle/logout</div>
+        <div className='btn-container'>
+          <ThemeToggle />
+          <LogoutContainer />
+        </div>
       </div>
     </Wrapper>
   );
